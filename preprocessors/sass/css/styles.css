@@ -1,0 +1,81 @@
+.header {
+	background-color: #eaeaea;
+	color: white;
+}
+
+.header__img {
+	width: 10%;
+}
+
+.header.header__nav {
+	background-color: red;
+}
+
+.container {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+@media only screen and (min-width: 1000px) {
+	.block {
+		width: 90vw;
+	}
+}
+
+.btn-info, .btn-success {
+	color: white;
+	width: 50px;
+}
+
+.btn-info {
+	background-color: blue;
+}
+
+.btn-success {
+	background-color: green;
+}
+
+.div {
+	padding: 15px;
+}
+
+p {
+	font-size: 16px;
+}
+
+small {
+	font-size: 12px;
+}
+
+.normal {
+	font-weight: normal;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.italic {
+	font-weight: italic;
+}
+
+.class-1:before {
+	content: "1";
+}
+
+.class-2:before {
+	content: "2";
+}
+
+.class-3:before {
+	content: "3";
+}
+
+.class-4:before {
+	content: "4";
+}
+
+p {
+	color: white;
+}

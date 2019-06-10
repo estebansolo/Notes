@@ -1,9 +1,9 @@
 # Preprocessors
 
 <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
-    <img src="https://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg" alt="Sass Image" style="max-width: 200px;">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LESS_Logo.svg" alt="Less Image" style="max-width: 200px;">
-    <img src="https://abalozz.es/content/images/2014/Dec/stylus.png" alt="Stylus Image" style="max-width: 200px;">
+    <img src="https://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg" alt="Sass Image" width="200">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LESS_Logo.svg" alt="Less Image" width="200">
+    <img src="https://abalozz.es/content/images/2014/Dec/stylus.png" alt="Stylus Image" width="200">
 </div>
 
 ## Contents
@@ -12,16 +12,14 @@
 - [Less](less/)
 - [Stylus](stylus/)
 
-## Diferencias entre Sass, Stylus y Less
+## Differences between Sass, Stylus and Less
 
-Existen muchos preprocesadores css. Entre ellos podemos encontrar:
+There are many css preprocessors. Among them we can find:
 
-* `Less` es un preprocesador muy simple.
-* `Sass` es una herramienta muy interesante gracias a su comunidad.
-* `Stylus` es muy completo pero a la vez incluso complejo.
+* `Less` is a very simple preprocessor.
+* `Sass` is a very interesting and complete tool thanks to its community.
+* `Stylus` is very complete and complex.
 
-Elegir cuál es el mejor procesador depende de lo que queremos lograr con el proyecto. Algunas de las razones están relacionadas con el equipo y las necesidades que tenemos con el proyecto.
+To choose the best preprocessor depends on what we want to achieve with the project. It will depend on the team and the needs we have with the project.
 
-Cuando trabajamos con preprocesadores se tiene que compilar el código para transformarlo en css y las páginas html lo puedan entender.
-
-los archivos de sass tienen las extensión `.sass`.
+When we work with preprocessors the code must be compiled to transform it into css so that the html pages can understand it.

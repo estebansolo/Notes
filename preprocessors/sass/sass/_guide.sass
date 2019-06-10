@@ -1,0 +1,101 @@
+// Variables
+
+$color-primary: #eaeaea
+$color-secondary: rgb(219, 216, 121)
+$width-nav: 500px
+$width-logo: 10%
+$with-double: $width-logo * 1.5
+$width-wrapper: 90vw
+
+
+// Nesting
+.header
+    background-color: $color-primary
+    color: white
+    &__img // header__img
+        width: $width-logo
+    &.header__nav
+        background-color: red
+
+
+// Mixing
+@mixin flex-between
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+
+.container
+    @include flex-between
+
+
+// Content
+@mixin respond-to($width)
+    @media only screen and (min-width: $width)
+        @content
+
+.block
+    @include respond-to(1000px)
+        width: $width-wrapper
+
+
+// Extends
+%btn
+  color: white
+  width: 50px
+
+.btn-info
+  @extend %btn
+  background-color: blue
+
+.btn-success
+  @extend %btn
+  background-color: green
+
+
+// Functions
+darken(#ffffff, 25%)
+lighten(#ffffff, 25%)
+invert(#ffffff)
+
+@function suma($numero-uno, $numero-dos)
+  @return $numero-uno + $numero-dos
+
+.div
+  padding: suma(10px, 5px)
+
+
+// Array
+$sizes: ( big: 24px, normal: 16px, small: 14px, x-small: 12px )
+
+p
+  font-size: map-get($sizes, normal)
+
+small
+  font-size: map-get($sizes, x-small)
+
+
+// Each
+$font-weights: normal bold italic
+
+@each $font in ($font-weights)
+  .#{$font}
+      font-weight: $font
+
+
+// For
+@for $i from 1 to 5
+  .class-#{$i}
+    &:before
+      content: "#{$i}"
+
+
+// If
+$background-color: black
+
+@if $background-color == black
+  p
+    color: white
+
+@else
+  p
+    color: black
