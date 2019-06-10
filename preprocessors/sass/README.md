@@ -133,22 +133,6 @@ Output:
 
 The wildcard `&` is used to refer to the parent.
 
-
-`BEM` — Block Element Modifier
-"It's a methodology that helps you to create reusable components and code sharing in front-end development"
-
-```sass
-// Block
-.btn
-  // Element
-  .btn__icon
-    // Element form the Block
-
-  Modifier
-  .btn--warning
-    //Same properties except visual changes
-```
-
 <div align="right">
   <small><a href="#contents">:arrow_up: Up</a></small>
 </div>
@@ -495,7 +479,6 @@ p {
 * [SASS Meister](https://www.sassmeister.com/)
 * [SASS Documentation](https://sass-lang.com/)
 * [SASS Functions](https://sass-lang.com/documentation/functions)
-* [BEM](http://getbem.com/introduction/)
 
 <div align="right">
   <small><a href="#contents">:arrow_up: Up</a></small>
