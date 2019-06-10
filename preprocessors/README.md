@@ -8,9 +8,9 @@
 
 ## Contents
 - [Diferencias entre Sass, Stylus y Less](#diferencias-entre-sass-stylus-y-less)
-- [Sass](sass.md)
-- [Less](less.md)
-- [Stylus](stylus.md)
+- [Sass](sass/)
+- [Less](less/)
+- [Stylus](stylus/)
 
 ## Diferencias entre Sass, Stylus y Less
 
