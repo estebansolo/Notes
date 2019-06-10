@@ -1,6 +1,6 @@
 # Preprocessors
 
-<div style="width: 100%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+<div style="text-alig:center; margin: 0 10px;">
     <img src="https://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg" alt="Sass Image" width="200">
     <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LESS_Logo.svg" alt="Less Image" width="200">
     <img src="https://abalozz.es/content/images/2014/Dec/stylus.png" alt="Stylus Image" width="200">
