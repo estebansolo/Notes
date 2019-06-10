@@ -5,611 +5,379 @@
 - [Sass file extensions](#sass-file-extensions)
 - [Import Partials](#import-partials)
 - [Variables](#variables)
-
-
-
-  - [Escapar una variable](#escapar-una-variable)
-- [Anidaciones](#anidaciones)
+  - [Escape a variable](#escape-a-variable)
+- [Nesting](#nesting)
 - [Mixins](#mixins)
   - [Content](#content)
 - [Extend](#extend)
-- [Funciones](#funciones)
-  - [Crear funciones](#crear-funciones)
-- [Array](#array)
-- [Controles de Flujo](#controles-de-flujo)
-  - [each](#each)
-  - [for](#for)
-  - [if](#if)
-- [Enlaces de Interés](#enlaces-de-interés)
+- [Functions](#functions)
+  - [Create functions](#create-functions)
+- [Arrays](#arrays)
+- [Each](#each)
+- [For](#for)
+- [If](#if)
+- [You must be interested](#you-must-be-interested)
 
 ## Test Sass Code
 
-[Sass Meister](https://www.sassmeister.com/) is a tools that allow us to prove our sass code and see how it works
+[Sass Meister] is an online tool that allows us to test our code in Sass and see how it works by converting it to CSS.
 
 <div align="right">
-  <small><a href="#contents">🡡 volver al inicio</a></small>
+  <small><a href="#contents">:arrow_up: Up</a></small>
 </div>
 
 ## Sass file extensions
 
-Sass provide two extensions
+Sass provide two extensions. [Syntax Documentation]
 
 ```sass
 .sass or .scss
 ```
-<a href="https://sass-lang.com/documentation/syntax" target="_blank">Syntax Documentation</a>
-
 <div align="right">
-  <small><a href="#contents">🡡 volver al inicio</a></small>
+  <small><a href="#contents">:arrow_up: Up</a></small>
 </div>
 
 ## Import Partials
 
-Una ventaja que trae Sass es el poder organizar mejor nuestros archivos. Esto lo podemos lograr separando nuestros estílos en múltiples archivos. De tal modo, ya no tenemos que revisar un archivo muy amplio, sino que podemos separar nuestros estilos en varios módulos haciendo el trabajo mucho más fácil.
+One advantage of Sass is the ability to organize our files. We can do this by separating our styles into different files. This way, we no longer have to handle large files, but we can separate them making the job much easier.
 
-Todos los import van en un solo archivo con el fin de compilar este unico archivo, para organizar e importar archivos usamos `@import`.
+Imports can be made in any file, however you must make a main file in order to compile this one file. To import files we use `@import`.
 
 ```sass
 @import "headers"
 ```
 
-La forma de nombrar los parciales que seran importados es con un `_` al inicio, sin embargo el compilador reconoce los archivos sin tener la extension ni el `_`.
+The way to name the partials that will be imported is with a `_` at the beginning, however the compiler recognizes the files without having the extension or the `_`.
 
 ```
 eg: _headers.sass
 ```
 
 <div align="right">
-  <small><a href="#contents">🡡 volver al inicio</a></small>
+  <small><a href="#contents">:arrow_up: Up</a></small>
 </div>
 
 ## Variables
 
-Las variables son una forma de almacenar la información que se desea reutilizar. 
-
-Se puede almacenar diferentes valores: colores, fuentes, tamaños y cualquier valor que se desee reutilizar. Sass usa el símbolo `$` para hacer que algo sea una variable. 
-
-Ejemplo:
+Variables are a way of storing the information you want to reuse, you can store different values: colors, fonts, sizes and any value you want to reuse. Sass uses the `$` symbol to make a string a variable.
 
 ```sass
 $font-stack: Helvetica, sans-serif
 $primary-color: #333
 
-body {
+body
   font: 100% $font-stack
   color: $primary-color
+```
+
+Output:
+
+```css
+body {
+  font: 100% Helvetica, sans-serif;
+  color: #333;
 }
 ```
 
-`BEM` — Block Element Modifier o Modificador de Bloques de Elementos
-
-Como su nombre indica, BEM distingue claramente 3 conceptos: el Bloque, el Elemento y el Modificador.
-
 <div align="right">
-  <small><a href="#tabla-de-contenido">🡡 volver al inicio</a></small>
+  <small><a href="#contents">:arrow_up: Up</a></small>
 </div>
 
+### Escape a variable
 
-
-
-
-### Escapar una variable
-
-Para escapar una variable se usa el comodín `#` ademas de las llaves. 
-
-Esto es necesario en casos como, por ejemplo, cuando la variable está rodeada por comillas y de no ponerse el escape la variable pasaría como una cadena de caracteres..
+To escape a variable is used the wildcard `#` in addition to the keys, this is necessary in cases such as, for example, when the variable is surrounded by quotes and if not put the escape the variable would pass as a string of characters.
 
 ```sass
-$size: 10;
+$size: 10
 
-div {
+div
   content: "#{$size}"
+```
+
+Output:
+
+```css
+div {
+  content: "10";
 }
 ```
 
 <div align="right">
-  <small><a href="#tabla-de-contenido">🡡 volver al inicio</a></small>
+  <small><a href="#contents">:arrow_up: Up</a></small>
 </div>
 
-## Anidaciones
+## Nesting
 
 ```sass
-.btn {  
+.btn
+  font-size: 15pt
+  &__icon
+    font-size: .6em
+  &.btn--info
+    background-color: white
+```
+
+Output:
+
+```css
+.btn {
   font-size: 15pt;
-  &__icon {
-    font-size: .6em;
-  }
-  &.btn--info {
-    background-color: $color-info;
-  }
+}
+.btn__icon {
+  font-size: 0.6em;
+}
+.btn.btn--info {
+  background-color: white;
 }
 ```
 
-El comodín `&` se usa para hacer referencia al padre.
+The wildcard `&` is used to refer to the parent.
+
+
+`BEM` — Block Element Modifier
+"It's a methodology that helps you to create reusable components and code sharing in front-end development"
+
+```sass
+// Block
+.btn
+  // Element
+  .btn__icon
+    // Element form the Block
+
+  Modifier
+  .btn--warning
+    //Same properties except visual changes
+```
 
 <div align="right">
-  <small><a href="#tabla-de-contenido">🡡 volver al inicio</a></small>
+  <small><a href="#contents">:arrow_up: Up</a></small>
 </div>
-
-
-
-~~~
-.btn{
-	display: inline-block;
-	color: #fff;
-	background-color: #333;
-	border-radius: 5px;
-
-	.btn__icon{
-		font-size: 24px;
-	}
-
-	.btn--info{
-		background-color: skyblue;
-	}
-}
-~~~
-
-
 
 ## Mixins
 
-Los mixins nos ayudan a reciclar declaraciones para evitar mucho trabajo. Para esto vamos a usar @`mixin`.
+The mixins allow to define reusable styles in all the stylesheet, these are defined with the directive **@mixin** followed by the name of the mixin, the mixins allow us to receive parameters, this functionality helps us a lot, since with only one mixins we can obtain different outputs with only changing the value of the parameter.
 
-Cuando se define un mixin, los argumentos se definen como una serie de variables separadas por comas, y todo ello encerrado entre paréntesis.
-
-```sass
-@mixin max-width($max-width: 800px) {
-  max-width: $max-width
-  margin-left: auto
-  margin-right: auto
-}
-```
-
-En este caso le estamos definiendo un valor por defecto. Si deseamos cambiar ese valor, cuando lo llamemos se lo podemos cambiar de esta forma:
-
-```sass
-@mixin max-width(1200px)
-```
-
-<div align="right">
-  <small><a href="#tabla-de-contenido">🡡 volver al inicio</a></small>
-</div>
-
-
+The mixins are included in the style sheets by using **@include** followed by the name of the mixin and optionally by a list of arguments.
 
 ```sass
 @mixin h1
-    h1
-        margin: 0
-        padding: 0
+  h1
+    margin: 0
+    padding: 0
 
-
-@mixin wrap-width($width: $wrapper-width)
-    width: $width
-    margin: 0 auto
-
-@include h1
-@influde wrap-width(500px)
-```
-
-
-Los mixins permiten definir estilos reutilizables en toda la hoja de estilos.
-Se definen con la directiva **@mixin** seguida del nombre del mixin
-
-Los mixins se incluyen en las hojas de estilos mediante la directiva **@include** seguida del nombre del mixin y opcionalmente por una lista de argumentos.
-
-```sass
-@mixin max-width($max-width: 800px) {
-	max-width: $max-width;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.container{
-	@include max-width(1200px);
-}
-
-section{
-	@include max-width(800px);
-	background-color: #333;
-	padding: 15px;
-}
-```
-
-#### propios
-
-Los **mixins **nos permite recibir parámetros, esta funcionalidad nos ayuda bastante, ya que con un solo mixins podemos obtener distintas salidas con solo cambiar el valor del parámetro.
-Ejemplo: Nos ayuda bastante al momento de realizar mediaqueries
-
-@mixin encabezados($size)
+@mixin heads($size)
   h1
     font-size: $size
 
   h2
-    font-size: $size - 0.2
-
-  h3
     font-size: $size - 0.5
 
-@include encabezados(1.5em)
-@media(min-width: 800px)
-  @include encabezados(2em)
+  h3
+    font-size: $size - 0.8
 
+@mixin wrap-width($width: 800px)
+    width: $width
+    margin: 0 auto
 
-BEM block element modifier
-organizar el css
+@include h1
+.container
+  @influde wrap-width(500px)
 
-bloque:
-.btn
-  elemento
-    .btn__icon
-
-  modificador
-    .btn--warning
-    mismas propiesdades excepto cambios visuales
-
-
-
-
-
-### Content
-
-Una de las características que tienen los mixins es la directiva content. Esta nos permite incluir un bloque de contenido dentro de un mixin.
-
-```sass
-@mixin response-to($width) {
-  @media only screen and (min-width: $width) {
-    @content;
-  }
-}
+@include heads(2em)
+@media(max-width: 800px)
+  @include heads(1em)
 ```
 
-Se usa de esta forma:
+Output:
 
-```sass
-section {
-  background: blue;
-  @include response-to(800px) {
-    background-color: red;
-  };
+```css
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  @influde wrap-width(500px);
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.2em;
+}
+
+@media(max-width: 800px) {
+  h1 {
+    font-size: 1em;
+  }
+
+  h2 {
+    font-size: 0.5em;
+  }
+
+  h3 {
+    font-size: 0.2em;
+  }
 }
 ```
 
 <div align="right">
-  <small><a href="#tabla-de-contenido">🡡 volver al inicio</a></small>
+  <small><a href="#contents">:arrow_up: Up</a></small>
 </div>
 
+### Content
 
+One of the characteristics of the mixins is the `@content`. This allows us to include a block of content within a mixin.
 
-Nos permite incluir un bloque de contenido dentro de un mixin.
+```sass
+@mixin response-to($width)
+  @media only screen and (min-width: $width)
+    @content
 
-**Entrada:**
+section
+  background: blue
+  @include response-to(800px)
+    background-color: red
+```
 
-~~~
-@mixin respond-to($width){
-  @media only screen and (min-width: $width){
-    @content;
-  }
-}
+Output:
 
-section{
-  background-color: skyblue;
-  @include respond-to(800px){
-    background-color: teal;
-  }
-}
-~~~
-
-**Salida:**
-
-~~~
+```css
 section {
-  background-color: skyblue;
+  background: blue;
 }
-
 @media only screen and (min-width: 800px) {
   section {
-    background-color: teal;
+    background-color: red;
   }
 }
-~~~
+```
 
-
-@content
-incluir un bloque dentro de un mixing
-
-
+<div align="right">
+  <small><a href="#contents">:arrow_up: Up</a></small>
+</div>
 
 ## Extend
 
-Permiten que una declaración herede estilos declarados por otra regla o placeholder. Los extend se declaran con el símbolo de porcentaje `%`.
+They allow us to create fragments of styles and then inherit them without having to duplicate the code. Extends are declared with the sign of porcetage `%`.
 
 ```sass
-%btn {
-  color: red;
+%btn
+  color: white
+  width: 50px
+
+.btn-info
+  @extend %btn
+  background: blue
+
+.btn-success
+  @extend %btn
+  background: green
+```
+
+Output:
+
+```css
+.btn-info, .btn-success {
+  color: white;
   width: 50px;
 }
 
 .btn-info {
-  @extend %btn;
   background: blue;
+}
+
+.btn-success {
+  background: green;
 }
 ```
 
 <div align="right">
-  <small><a href="#tabla-de-contenido">🡡 volver al inicio</a></small>
+  <small><a href="#contents">:arrow_up: Up</a></small>
 </div>
 
+## Functions
 
-Nos permite crear un fragmento de estilos que luego podamos reutilizar fácilmente en cualquier componente.
-
-**Entrada:**
-
-~~~
-%max-width{
-  max-width: 80%;
-  margin: 0 auto;
-}
-
-.section{
-  @extend %max-width;
-}
-
-.container{
-  @extend %max-width;
-}
-~~~
-
-**Salida:**
-
-~~~
-.section, .container {
-  max-width: 80%;
-  margin: 0 auto;
-}
-~~~
-
-
-@extends
-Incluir los estilos de un elemento en otro
-
-placeholder %btn
-no aparece en el css hasta influirlo
-
-%max-width
-  max-width: 80%
-  margin: 0 auto
-
-.section
-  @extend %max-width
-
-
-
-## Funciones
-
-Sass tiene muchas funciones que podemos usar cuando estamos modificando CSS. Muchas de estas funciones son muy útiles como por ejemplo aclarar un color u oscurecerlo. 
+Sass has several functions that we can use. Many of these functions are very useful such as lightening, darkening or inverting a color.
 
 ```sass
-darken(#ffffff, 25%)
 lighten(#ffffff, 25%)
+darken(#ffffff, 25%)
 invert(#ffffff)
 ```
 
-La lista completa de funciones se pueden ver aquí:
-https://sass-lang.com/documentation/file.SASS_REFERENCE.html#functions
+The complete list of functions can be viewed here: [Functions]
 
 <div align="right">
-  <small><a href="#tabla-de-contenido">🡡 volver al inicio</a></small>
+  <small><a href="#contents">:arrow_up: Up</a></small>
 </div>
 
+### Create functions
 
+```sass
+@function add($num-one, $num-two)
+  @return $num-one + $num-two
 
-**Entrada:**
+.div
+  padding: add(10px, 5px)
+  color: darken(#F0F0F0, 50%)
+```
 
-~~~
-@function suma($num-uno, $num-dos){
-  @return $num-uno + $num-dos;
-}
+Output:
 
-.div{
-  padding: suma(12, 6);
-}
-
-
-$fs: (
-  big: 24px,
-  normal: 16px,
-  small: 14px,
-  x-small: 12px
-);
-
-p{
-  font-size: map-get($fs, normal);
-}
-
-small{
-  color: #333;
-  font-size: map-get($fs, small);
-}
-~~~
-
-**Salida:**
-
-~~~
+```css
 .div {
-  padding: 18;
+  padding: 15px;
+  color: #717171;
 }
 
+```
+
+<div align="right">
+  <small><a href="#contents">:arrow_up: Up</a></small>
+</div>
+
+## Arrays
+
+```sass
+$sizes: ( big: 24px, normal: 16px, small: 14px, x-small: 12px )
+
+p
+  font-size: map-get($sizes, normal)
+
+small
+  color: black
+  font-size: map-get($sizes, x-small)
+```
+
+Output:
+
+```css
 p {
   font-size: 16px;
 }
 
 small {
-  color: #333;
-  font-size: 14px;
-}
-~~~
-
-#### propio
-
-
-Functiones
-Sass tiene muchas funciones que podemos usar cuando estamos modificando CSS. Muchas de estas funciones son muy útiles como por ejemplo aclarar un color u oscurecerlo.
-
-darken(#ffffff, 25%)
-lighten(#ffffff, 25%)
-invert(#ffffff)
-
-La lista completa de funciones se pueden ver aquí:
-https://sass-lang.com/documentation/file.SASS_REFERENCE.html#functions
-
-
-
-https://github.com/MineiToshio/CursosPlatzi/tree/master/Curso%20de%20Sass
-https://sass-lang.com/documentation/functions
-
-
-### Crear funciones
-
-```sass
-@function suma($numero-uno, $numero-dos) {
-  @return $numero-uno + $numero-dos;
-}
-
-.div {
-  padding: suma(10px, 5px);
+  color: black;
+  font-size: 12px;
 }
 ```
 
 <div align="right">
-  <small><a href="#tabla-de-contenido">🡡 volver al inicio</a></small>
+  <small><a href="#contents">:arrow_up: Up</a></small>
 </div>
 
+## Each
 
-@function suma($num-uno, $num-dos)
-  @return $num-uno + $num-dos
-
-
-.h1
-  padding: suma(20px, 10px)
-
-
-.h1{
-  padding: 30px;
-}
-
-
-
-## Array
+We can make loops the same way we work in any programming language.
 
 ```sass
-$fs: (
-  big: 24px,
-  normal: 16px,
-  small: 14px,
-  x-small: 12px
-);
-
-p {
-  font-size: map-get($fs, normal);
-}
-
-small {
-  font.size: map-get($fs, x-small);
-}
-```
-
-<div align="right">
-  <small><a href="#tabla-de-contenido">🡡 volver al inicio</a></small>
-</div>
-
-
-Mapas (Dict)
-$fs : (
-  big: 24px,
-  normal: 16px,
-  small: 14px,
-  xsmall: 12px
-)
-
-p
-  font-size: map-get($fs, normal)
-
-small
-  font-size: map-get($fs, small)
-
-
-
-
-
-
-
-## Controles de Flujo
-
-### each
-
-```sass
-$font-weights: normal bold italic;
-
-@each $font in ($font-weights) {
-  .#{$font} {font.weight: $font;}
-}
-```
-
-y esto da como resultado:
-
-```css
-.normal {
-  font-weight: normal;
-}
-
-.bold {
-  font-weight: bold;
-}
-
-.italic {
-  font-weight: italic;
-}
-```
-
-<div align="right">
-  <small><a href="#tabla-de-contenido">🡡 volver al inicio</a></small>
-</div>
-
-
-**Entrada:**
-
-~~~
-$font-weights: normal bold italic;
-
-@each $font in ($font-weights){
-  .#{$font} {
-    font-weight: $font;
-  }
-}
-~~~
-
-**Salida:**
-
-~~~
-.normal {
-  font-weight: normal;
-}
-
-.bold {
-  font-weight: bold;
-}
-
-.italic {
-  font-weight: italic;
-}
-~~~
-
-#### propio
-
-each (cliclo)
-
 @each $font in (normal, bold, italic)
   .text-#{$font}
     font-weight: $font
@@ -618,206 +386,121 @@ $fw : normal, bold, italic
 @each $font in ($fw)
   .text-#{$font}
     font-weight: $font
+```
 
+Output:
 
+```css
+.text-normal {
+  font-weight: normal;
+}
 
+.text-bold {
+  font-weight: bold;
+}
 
-### for
-
-```sass
-@for $i from 1 to 5 {
-  .class-#{$i} {
-    &:before {
-      content: "#{$i}"
-    }
-  }
+.text-italic {
+  font-weight: italic;
 }
 ```
 
-Resultado:
+<div align="right">
+  <small><a href="#contents">:arrow_up: Up</a></small>
+</div>
+
+## For
+
+We can use this directive in two ways, using `to` or `through`, the difference is the following:
+
+  - **to** => `@for $var from <start> to <end>{ ... }`
+  - **through** => `@for $var from <start> through <end>{ ... }`
+
+For Example, if we want to iterate from 1 to 5
+
+```sass
+// 1 - 5 runs 4 times
+@for $i from 1 to 5
+  .class-#{$i}
+    &::before
+      content: "#{$i}"
+
+// 1 - 5 runs 5 times
+@for $i from 1 through 5
+  .class-#{$i}
+    &:before
+      content: "#{$i}"
+```
+
+Output:
 
 ```css
-.class-1:before {
+.class-1::before {
   content: "1";
 }
 
-.class-2:before {
+.class-2::before {
   content: "2";
 }
 
-...
+.class-3::before {
+  content: "3";
+}
 
+.class-4::before {
+  content: "4";
+}
+
+/* Using through */
 .class-5:before {
   content: "5";
 }
 ```
 
 <div align="right">
-  <small><a href="#contents">🡡 volver al inicio</a></small>
+  <small><a href="#contents">:arrow_up: Up</a></small>
 </div>
 
-
-**Entrada:**
-
-~~~
-@for $i from 1 to 5{
-  .class-#{$i}{
-    &:before{
-      content: "#{$i}";
-    }
-  }
-}
-~~~
-
-**Salida:**
-
-~~~
-.class-1:before {
-  content: "1";
-}
-
-.class-2:before {
-  content: "2";
-}
-
-.class-3:before {
-  content: "3";
-}
-
-.class-4:before {
-  content: "4";
-}
-~~~
-
-
-#### propio
-
-  for (ciclo)
-
-from
-1 - 5 itera 4
-@for $var from <inicio> to <fin>{ ... }
-
-  @for $i from 1 to 5
-    .class-#{$i}
-      &::before
-        content: "#{$i}"
-
-through
-@for $var through <inicio> to <fin>{ ... }
-1 - 5 itera 5
-
-
-
-
-
-
-### if
+## If
 
 ```sass
-$background-color: black;
-
-@if $background-color == black {
-  p {
-    text-color: white;
-  }
-}
-@else {
-  p {
-    text-color: black;
-  }
-}
-```
-
-<div align="right">
-  <small><a href="#contents">🡡 volver al inicio</a></small>
-</div>
-
-
-**Entrada:**
-
-~~~
-$background: black;
-
-@if $background == black{
-  p{
-    color: white;
-  }
-}
-@else{
-  p{
-    color: black;
-  }
-}
-~~~
-
-**Salida:**
-
-~~~
-p {
-  color: white;
-}
-~~~
-
-
-
-#### propio
-
-if
-
 p
   text-color: blue
 
 $background-color : black
-@if $background-color == black 
+@if $background-color == black
   p
     text-color: $background-color
 @else
   p
     text-color: white
+```
 
+Output:
 
+```css
+p {
+  text-color: blue;
+}
 
-
-
-## Enlaces de Interés
-* [Curso de Sass](https://platzi.com/clases/sass/)
+p {
+  text-color: black;
+}
+```
 
 <div align="right">
-  <small><a href="#contents">🡡 volver al inicio</a></small>
+  <small><a href="#contents">:arrow_up: Up</a></small>
 </div>
 
+## You must be interested
+* [SASS Meister](https://www.sassmeister.com/)
+* [SASS Documentation](https://sass-lang.com/)
+* [SASS Functions](https://sass-lang.com/documentation/functions)
+* [BEM](http://getbem.com/introduction/)
 
+<div align="right">
+  <small><a href="#contents">:arrow_up: Up</a></small>
+</div>
 
-
-### Enlaces de interes ###
-
-[SASS - Documentación Oficial](https://sass-lang.com/) <br>
-[SASS Functions](http://sass-lang.com/documentation/Sass/Script/Functions.html) <br>
-[BEM](http://getbem.com/introduction/) <br>
-[SASS Meister](https://www.sassmeister.com/) <br>
-[Funciones nativas de SASS](https://styde.net/lista-completa-de-funciones-nativas-de-sass/) <br>
-
-
-
-
-
-
-
-En el reto anterior el profesor propuso crear una función que nos permita manejar los z-index de nuestro proyecto. Para esto, lo primero que debemos hacer es definir cuales son las respectivas propiedades y valores que vamos a manejar. En este caso decidí que los elementos que suelen tener la propiedad de z-index son:
-
-    Los dropdown que contenga mi proyecto.
-    Los elementos sticky.
-    Los modales
-    El overlay de cada modal
-    Los tooltip
-
-Una vez definido esto, vamos a asignarle un valor. Es importante que no sean valores seguidos, ya que puede que necesitemos agregar la propiedad de z-index a elementos individuales en el camino y no queremos que se pisen. Para esto, dejaremos un margen de 20 entre cada uno.
-
-$fs: ( 
-	zindex-dropdown: 100, 
-	zindex-sticky: 120, 
-	zindex-modal: 140, 
-	zindex-overlay:160,
-	zindex-tooltip:180
-);
+[Sass Meister]: <https://www.sassmeister.com/>
+[Syntax Documentation]: <https://sass-lang.com/documentation/syntax>
+[Functions]: <https://sass-lang.com/documentation/functions>
