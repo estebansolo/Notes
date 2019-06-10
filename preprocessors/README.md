@@ -1,9 +1,16 @@
 # Preprocessors
-
-<div style="text-alig:center; margin: 0 10px;">
-    <img src="https://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg" alt="Sass Image" width="200">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LESS_Logo.svg" alt="Less Image" width="200">
-    <img src="https://abalozz.es/content/images/2014/Dec/stylus.png" alt="Stylus Image" width="200">
+<style type="text/css">
+    div{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+</style>
+<div>
+    <img src="https://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg" alt="Sass Image" width="100">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LESS_Logo.svg" alt="Less Image" width="150">
+    <img src="https://abalozz.es/content/images/2014/Dec/stylus.png" alt="Stylus Image" width="100">
 </div>
 
 ## Contents
