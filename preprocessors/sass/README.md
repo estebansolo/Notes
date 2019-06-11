@@ -1,8 +1,7 @@
 # Sass Course
 
 ## Contents
-- [Test Sass Code](#test-sass-code)
-- [Sass file extensions](#sass-file-extensions)
+- [Introduction](#introduction)
 - [Import Partials](#import-partials)
 - [Variables](#variables)
   - [Escape a variable](#escape-a-variable)
@@ -18,24 +17,15 @@
 - [If](#if)
 - [You must be interested](#you-must-be-interested)
 
-## Test Sass Code
-
-[Sass Meister] is an online tool that allows us to test our code in Sass and see how it works by converting it to CSS.
-
-<div align="right">
-  <small><a href="#contents">:arrow_up: Up</a></small>
-</div>
-
-## Sass file extensions
+## Introduction
 
 Sass provide two extensions. [Syntax Documentation]
 
 ```sass
 .sass or .scss
 ```
-<div align="right">
-  <small><a href="#contents">:arrow_up: Up</a></small>
-</div>
+
+[Try Sass]
 
 ## Import Partials
 
@@ -484,6 +474,6 @@ p {
   <small><a href="#contents">:arrow_up: Up</a></small>
 </div>
 
-[Sass Meister]: <https://www.sassmeister.com/>
+[Try Sass]: <https://www.sassmeister.com/>
 [Syntax Documentation]: <https://sass-lang.com/documentation/syntax>
 [Functions]: <https://sass-lang.com/documentation/functions>
