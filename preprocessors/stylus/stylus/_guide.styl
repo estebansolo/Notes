@@ -1,0 +1,56 @@
+// Variables
+
+color-primary = #eaeaea
+color-secondary = rgb(219, 216, 121)
+width-nav = 500px
+width-logo = 10%
+with-double = width-logo * 1.5
+width-wrapper = 90vw
+
+
+// Nesting
+.header
+    background-color: color-primary
+    color: white
+    &__img // header__img
+        width: width-logo
+    &.header__nav
+        background-color: red
+
+
+// Mixing
+mixin-flex-between()
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+
+.container
+    mixin-flex-between()
+
+
+
+// Functions
+function-suma(numero-uno, numero-dos)
+  numero-uno + numero-dos
+
+.div
+  padding: function-suma(10px, 5px)
+
+
+// For
+for i in (1..12)
+  .class-{i}
+    &:before
+      content: i
+
+
+// If
+background-color = black
+
+if background-color == black
+  p
+    color: white
+
+else
+  p
+    color: black

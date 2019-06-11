@@ -1,0 +1,26 @@
+.header {
+    background-color: #eaeaea;
+    color: white;
+}
+.header__img {
+    width: 10%;
+}
+.header.header__nav {
+    background-color: red;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.div {
+    background-color: #DFDFDF;
+    color: #131313;
+}
+.div {
+    width: 100%;
+    color: black;
+}
+.section {
+    color: black;
+}

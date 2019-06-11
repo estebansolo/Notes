@@ -1,0 +1,56 @@
+// Variables
+
+@color-primary: #eaeaea;
+@color-secondary: rgb(219, 216, 121);
+@width-nav: 500px;
+@width-logo: 10%;
+@with-double: @width-logo * 1.5;
+@width-wrapper: 90vw;
+
+
+// Nesting
+.header{
+    background-color: @color-primary;
+    color: white;
+    &__img{
+        width: @width-logo;
+    } // header__img
+    &.header__nav{
+        background-color: red;
+    }
+}
+
+
+// Mixing
+.flex-between(){
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.container{
+    .flex-between
+}
+
+
+// Functions
+.div{
+    background-color: #DFDFDF;
+    color: darken(#DFDFDF, 80%)
+}
+
+
+// When
+.responsive (@size) when (@size =< 1024px){
+    width: 100%;
+}
+
+.div{
+    .responsive(800px);
+    color: black;
+}
+
+.section{
+    .responsive(1200px);
+    color: black;
+}
