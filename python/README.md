@@ -16,9 +16,9 @@ Pylint not only checks that must be improved according to the PEP8 but also help
 
 ## Guide
 
-### Identation
+### Indentation
 
-  - Identation to 4 spaces
+  - Indentation to 4 spaces
   - Never mix spaces and tabulator
 
 In Python 2 it was possible to mix both forms, in Python 3 it is no longer possible.
@@ -369,29 +369,24 @@ f"The story of {a}, {b}, and {d}"
 ```  
 
 ```python
-print("{:.0f}".format(3.99))
-4
+"{:.0f}".format(3.99) # 4
 
-print("{:.2f}".format(3.1416))
-3.14
+"{:.2f}".format(3.1416) # 3.14
 
-print("{:03d}".format(1))
-001
+"{:03d}".format(1) # 001
 
-print("{:03d}".format(41))
-041
+"{:03d}".format(41) # 041
 
-print("{:b}".format(145))
-10010001
+"{:b}".format(145) # 10010001
 
-print("*{0:40}*".format("Hello World"))
-*Hello World                             *
+"*{0:40}*".format("Hello World")
+# *Hello World                             *
 
-print("*{0:>40}*".format("Hello World"))
-*                             Hello World*
+"*{0:>40}*".format("Hello World")
+# *                             Hello World*
 
-print("{:*^20s}".format("Hello World"))
-****Hello World*****
+"{:*^20s}".format("Hello World")
+# ****Hello World*****
 ```
 
 [Function Annotations]: <https://www.python.org/dev/peps/pep-0008/#function-annotations>
