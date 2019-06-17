@@ -1,27 +1,27 @@
 # Deployments
 
-## Tabla de Contenido
+## Table of Contents
 
 - [Introduction](#introduction)
-    - [CDN](#cdn)
-    - [API](#api)
-    - [Aplicaciones Monoliticas](#aplicaciones-monoliticas)
-    - [Microservicios](#microservicios)
-- [Opciones para hacer deploy](#opciones-para-hacer-deploy)
-    - [Amazon Web Services](#amazon-web-services)
-    - [Microsoft Azure](#microsoft-azure)
-    - [Google Cloud Plaform](#google-cloud-plaform)
-    - [Digital Ocean](#digital-ocean)
-    - [Zeit](#zeit)
-    - [Heroku](#heroku)
-    - [GitHub Pages](#gitHub-pages)
-    - [Surge](#surge)
+  - [CDN](#cdn)
+  - [API](#api)
+  - [Monolithic Applications](#monolithic-applications)
+  - [Microservices](#microservices)
+- [Deployment Options](#deployment-options)
+  - [Amazon Web Services](#amazon-web-services)
+  - [Microsoft Azure](#microsoft-azure)
+  - [Google Cloud Plaform](#google-cloud-plaform)
+  - [Digital Ocean](#digital-ocean)
+  - [Zeit](#zeit)
+  - [Heroku](#heroku)
+  - [GitHub Pages](#gitHub-pages)
+  - [Surge](#surge)
 
 ## Introduction
 
 ### CDN
 
-Content Delivery Network. Muchos servidores distribuidos por todo el mundo proveer de estos archivos comunes y que no están generados dinámicamente a nuestros usuarios y que puedan acceder rápidamente a ellos.
+Content Delivery Network. Many servers distributed around the world provide these common files and they are not dynamically generated to our users and they can quickly access them.
 
 <div align="right">
   <small><a href="#contents">:arrow_up: Up</a></small>
@@ -29,69 +29,69 @@ Content Delivery Network. Muchos servidores distribuidos por todo el mundo prove
 
 ### API
 
-Aplication Programming Interface. Representa la capacidad de comunicación entre componentes de software.
+Aplication Programming Interface. It represents the communication capacity between software components.
 
 <div align="right">
   <small><a href="#contents">:arrow_up: Up</a></small>
 </div>
 
-### Aplicaciones Monoliticas
+### Monolithic Applications
 
-#### Ventajas
+#### Advantages
 
-  - Buena para aplicaciones pequeñas.
-  - Fácil de desarrollar.
-  - Fácil de hacer deploy.
-  - Fácil para trabajar individual o en equipos pequeños.
+- Good for small applications.
+- Easy to develop.
+- Easy to deploy.
+- Easy to work individually or in small teams.
 
-#### Desventajas
+#### Disadvantages
 
-  - Difícil de mantener a largo plazo.
-  - Costosa para escalar.
-  - En caso de un error se puede caer toda la aplicación.
-  - Más difícil testear.
-  - Más difícil de depurar.
-
-<div align="right">
-  <small><a href="#contents">:arrow_up: Up</a></small>
-</div>
-
-### Microservicios
-
-¿Qué es un microservicio?
-El código dividido en varias aplicaciones.
-
-#### Ventajas
-
-  - Fácil de hacer deploy.
-  - Fácil de escalar.
-  - Fácil de testear.
-  - Fácil de depurar.
-  - En caso de error solo se cae un servicio.
-  - Se pueden utilizar diferentes tecnologías.
-
-#### Desventajas
-
-  - Difícil de orquestar.
-  - Puede ser lenta la comunicación entre servicios.
-  - Difícil saber cómo dividir nuestra aplicación.
-  - Es más costoso de mantener.
-
-Importante:
-
-Orquestación y Coreografía de Servicios = Ambos conceptos se basan en cómo hacer para comunicar nuestros servicios y que todo funcione como si fuera una sola aplicación.
+- Difficult to maintain in the long term.
+- Costly to climb.
+- In case of an error the whole application can be dropped.
+- More difficult to test.
+- More difficult to debug.
 
 <div align="right">
   <small><a href="#contents">:arrow_up: Up</a></small>
 </div>
 
-## Opciones para hacer deploy
+### Microservices
+
+What is a micro-service?
+The code divided into several applications.
+
+#### Advantages
+
+- Easy to deploy.
+- Easy to scale.
+- Easy to test.
+- Easy to debug.
+- In case of error only one service falls.
+- Different technologies can be used.
+
+#### Disadvantages
+
+- Hard to orchestrate.
+- Communication between services may be slow.
+- Difficult to know how to divide our application.
+- It is more expensive to maintain.
+
+Important:
+
+Orchestration and Choreography of Services = Both concepts are based on how to communicate our services and that everything works as if it were a single application.
+
+<div align="right">
+  <small><a href="#contents">:arrow_up: Up</a></small>
+</div>
+
+## Deployment Options
 
 ### Amazon Web Services
 
-Con control de infraestructura, Es el más grande de todas las opciones para hacer deploy.
+With infrastructure control, is the largest of all options to deploy.
 
-Ver mas: [Amazon Web Services]
+See more: [Amazon Web Services]
 
 <div align="right">
   <small><a href="#contents">:arrow_up: Up</a></small>
@@ -99,9 +99,9 @@ Ver mas: [Amazon Web Services]
 
 ### Microsoft Azure
 
-Con control de infraestructura, Perfecto para aplicaciones en C# y .Net
+With infrastructure control, Perfect for applications in C# and .Net
 
-Ver mas: [Microsoft Azure]
+See more: [Microsoft Azure]
 
 <div align="right">
   <small><a href="#contents">:arrow_up: Up</a></small>
@@ -109,9 +109,9 @@ Ver mas: [Microsoft Azure]
 
 ### Google Cloud Plaform
 
-Con control de infraestructura, Una ventaja es que tiene varias API propias de Google que se pueden integrar en la aplicación.
+With infrastructure control, One advantage is that it has several of Google's own APIs that can be integrated into the application.
 
-Ver mas: [Google Cloud Plaform]
+See more: [Google Cloud Plaform]
 
 <div align="right">
   <small><a href="#contents">:arrow_up: Up</a></small>
@@ -119,9 +119,9 @@ Ver mas: [Google Cloud Plaform]
 
 ### Digital Ocean
 
-Con control de infraestructura, Permite tener un servidor privado y empezar a encontrar todo lo que se quiere ahí.
+With infrastructure control, it allows you to have a private server and start finding everything you want there.
 
-Ver mas: [Digital Ocean]
+See more: [Digital Ocean]
 
 <div align="right">
   <small><a href="#contents">:arrow_up: Up</a></small>
@@ -129,30 +129,28 @@ Ver mas: [Digital Ocean]
 
 ### Zeit
 
-Sin control de infraestructura,
+Without infrastructure control, deploy of any kind, even Docker containers. Can only be used with Web servers. Some advantages when deploying:
 
-Deploy de cualquier tipo, incluso contenedores de Docker. Solo se pueden usar con servidores Web.
+#### Deployment types:
 
-Ventajas al momento de hacer deploy.
+- Applications Node.js
+- Static Sites
+- Docker Containers
 
-#### Tipos de deploy:
-  - Aplicaciones Node.js
-  - Sitios Estaticos
-  - Contenedores Docker
+#### Characteristics:
 
-#### Caracteristicas:
-  - Es facil.
-  - Escala automaticamente.
-  - Deploy inmutables, cada deploy retorna una URL a la cual se puede acceder.
-  - Deploy sin caida.
-  - Deploy Ilimitados
-  - HTTP2 Automaticamente
-  - Certificado SSL Gratis
-  - Logs por cada Deploy
-  - DNS (zeit.world)
-  - Comprar Dominios por CLI
+- It's easy.
+- Scales automatically.
+- Deploy immutable, each deploy returns a URL that can be accessed.
+- Deploy without drop.
+- Deploy Unlimited
+- HTTP2 Automatically
+- Free SSL Certificate
+- Logs for each Deploy
+- DNS (zeit.world)
+- Buy Domains by CLI
 
-Ver mas: [Zeit]
+See more: [Zeit] / [Notas](zeit/)
 
 <div align="right">
   <small><a href="#contents">:arrow_up: Up</a></small>
@@ -160,9 +158,9 @@ Ver mas: [Zeit]
 
 ### Heroku
 
-Sin control de infraestructura, Permite hacer deploy sin tener que pensar en cómo va a funcionar al app por debajo ni la infraestructura de esta.
+Without infrastructure control, it allows you to deploy without having to think about how the app will work underneath or the infrastructure of it.
 
-Ver mas: [Heroku]
+See more: [Heroku]
 
 <div align="right">
   <small><a href="#contents">:arrow_up: Up</a></small>
@@ -170,16 +168,15 @@ Ver mas: [Heroku]
 
 ### GitHub Pages
 
-Sitios estaticos, Permite hacer el deploy de archivos estáticos. Es completamente gratis pero el código es open source.
+Static sites, Allows to deploy static files. It is completely free but the code is open source.
 
-El proyecto debe estar publico, se usa principalmente para documentar librerias
+The project must be public, also is used mainly to document libraries. The steps to make a page available are the following.
 
-  - settings
-  - seccion github pages
-  - debe ser aster branch
-  - (save)
+- Go to Settings
+- In the **_github pages_** section, select the branch master
+- Click on Save to finish
 
-Ver mas: [GitHub Pages]
+See more: [GitHub Pages]
 
 <div align="right">
   <small><a href="#contents">:arrow_up: Up</a></small>
@@ -187,207 +184,32 @@ Ver mas: [GitHub Pages]
 
 ### Surge
 
-Sitios estaticos, Permite hacer deploys estáticos muy fácilmente por medio de un CLI.
+Static sites, Allows you to make static deploys very easily by means of a CLI.
 
 ```
 npm i -g surge
 ```
 
-Ir a la carpeta 
+Go to folder
 
 ```
 surge
 ```
-usar datos de login
 
-Ver mas: [Surge.sh]
+Use login data
+
+See more: [Surge]
 
 <div align="right">
   <small><a href="#contents">:arrow_up: Up</a></small>
 </div>
 
-
-
-
-elephantsql
-
-# INstalando now.sh
-
-```
-npm install -g now
-```
-
-Desplegar proyecto, entrar a la carpeta del prroyecto
-
-
-1. Ir a la capeta del proyecto
-2. Escribir el comando now.
-
-
-```
-now
-```
-
-Podemos cambiar el nombre de la url generada, se puede hacer de la siguiente manera:
-
-o en el archivo now.json
-
-"alias" : "alias.now.sh"
-
-```
-now alias {URL_GENERADA} {NOMBRE}.now.sh
-```
-
-
-    now Ejecuta el deploy (de todos los archivos de la carpeta donde se encuentra posicionado).
-    now [directorio del proyecto] Ejecuta el deploy de todos los archivos de la carpeta indicada.
-    now [user]/[repositorio] Ejecuta un deploy partiendo de un repositorio en GitHub.
-    now -e NODE_ENV=production -e MONGODB_PASSWORD=@password Ejecuta un deploy con variables de entorno.
-    now alias [URL generada por Now.sh] [URL personalizada].now.sh Permite crear un alias de la dirección URL.
-
-https://joaquinaraujo.github.io/deploy-now/
-
-Si se presenta algun error, en la raiz del proyecto crear un archivo now.json con el siguiente contenido
-
-```json
-{
-  "version": 1
-}
-```
-
-eliminar instancia creada
-
-```
-now rm [url]
-```
-
-## Deploy de applicacion Node
-
-Para hacer deploy a una aplicación en node.js, hay que crear un archivo now.json.
-En ese eschivo, escribir lo siguiente:
-
-{
-  "name": "{NOMBRE DE LA APP}",
-  "type": "npm"
-}
-
-
-## Deploy de docker
-
-Para hacer deploy a una aplicación Docker, hay que crear un archivo now.json.
-En ese eschivo, escribir lo siguiente:
-
-{
-  "name": "{NOMBRE DE LA APP}",
-  "type": "docker"
-}
-
-
-* pubsub = Nos sirve para tener una forma de comunicarnos cuando hacemos la parte de las suscripciones en real time.
-* resolvers = Nos sirven para saber qué hacer en cada query o cada cambio que el navegador envía al API.
-* squema = Le escribimos todo el esquema de datos que tiene nuestra aplicación, los datos que existen.
-* server = Donde inicializamos el servidor, sincronizamos el modelo con la base de datos, creamos el servidor express y creamos todo lo que necesitamos para correr en producción.
-
-## Secret y Variables de entorno
-
-"env" : {
-    "KEY" : "VALUE"
-}
-
-```
-now secrets
-```
-
-```
-now secrets add (snake_case) {VAR_NAME} "[VAR_VALUE]" 
-```
-
-"env" : {
-    "KEY" : "@secret"
-}
-
-## Ver codigo fuente
-
-despues de la url agregar _src // public
-_log // privado
-
-
-```
-now alias
-```
-
-ultimo deploy al alias definido en el now.json
-
-## Dominio
-
-zeit.world
-
-DNS gratuito global
-
-al tener el dominio
-
-  - custom dns
-  - poner los dns definidos
-
-comprar dominios
-
-```
-now domain buy [URL].com 
-```
-
-
-mostrar ultimos deploys
-```
-now ls
-```
-
-now alias [URL GENERADA] [CUSTOM DOMAIN]
-
-
-https://platzi.com/comentario/349139/
-https://github.com/platzi/now-course
-https://zeit.co/docs/
-https://platzi.com/comentario/331097/
-
-## Componer microservicios
-
-rules.json
-
- {
-    "rules": [
-        {
-            "pathname": "/graphql",
-            "dest": "[aplicacion].now.sh"
-        },
-        {
-            "pathname": "/[ruta]",
-            "dest": "[aplicacion].now.sh"
-        },
-        {
-            "dest": "[aplicacion].now.sh"
-        }
-    ]
-}
-
-
-La forma de establecer esta configuración en Now.sh es por medio de el comando:
-
-now alias [aplicacion].now.sh -r rules.json Permite establecer las configuraciones de rules.json en un deploy de Now.sh.
-
-## Deploy desde github
-
-```
-now user/proyecto
-```
-
-
-
-[Amazon Web Services]: <https://aws.amazon.com/>
-[Microsoft Azure]: <https://azure.microsoft.com/en-us/>
-[Google Cloud Plaform]: <https://cloud.google.com/>
-[Digital Ocean]: <https://www.digitalocean.com/>
-[Zeit]: <https://zeit.co/>
-[Heroku]: <https://www.heroku.com/>
-[GitHub Pages]: <https://pages.github.com/>
-[Gitlab Pages]: <https://about.gitlab.com/product/pages/>
-[Surge]: <https://surge.sh/>
+[amazon web services]: https://aws.amazon.com/
+[microsoft azure]: https://azure.microsoft.com/en-us/
+[google cloud plaform]: https://cloud.google.com/
+[digital ocean]: https://www.digitalocean.com/
+[zeit]: https://zeit.co/
+[heroku]: https://www.heroku.com/
+[github pages]: https://pages.github.com/
+[gitlab pages]: https://about.gitlab.com/product/pages/
+[surge]: https://surge.sh/
