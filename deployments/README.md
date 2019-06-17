@@ -24,7 +24,7 @@
 Content Delivery Network. Many servers distributed around the world provide these common files and they are not dynamically generated to our users and they can quickly access them.
 
 <div align="right">
-  <small><a href="#table_of_contents">:arrow_up: Up</a></small>
+  <small><a href="#table-of-contents">:arrow_up: Up</a></small>
 </div>
 
 ### API
@@ -32,7 +32,7 @@ Content Delivery Network. Many servers distributed around the world provide thes
 Aplication Programming Interface. It represents the communication capacity between software components.
 
 <div align="right">
-  <small><a href="#table_of_contents">:arrow_up: Up</a></small>
+  <small><a href="#table-of-contents">:arrow_up: Up</a></small>
 </div>
 
 ### Monolithic Applications
@@ -53,7 +53,7 @@ Aplication Programming Interface. It represents the communication capacity betwe
 - More difficult to debug.
 
 <div align="right">
-  <small><a href="#table_of_contents">:arrow_up: Up</a></small>
+  <small><a href="#table-of-contents">:arrow_up: Up</a></small>
 </div>
 
 ### Microservices
@@ -82,7 +82,7 @@ Important:
 Orchestration and Choreography of Services = Both concepts are based on how to communicate our services and that everything works as if it were a single application.
 
 <div align="right">
-  <small><a href="#table_of_contents">:arrow_up: Up</a></small>
+  <small><a href="#table-of-contents">:arrow_up: Up</a></small>
 </div>
 
 ## Deployment Options
@@ -94,7 +94,7 @@ With infrastructure control, is the largest of all options to deploy.
 See more: [Amazon Web Services]
 
 <div align="right">
-  <small><a href="#table_of_contents">:arrow_up: Up</a></small>
+  <small><a href="#table-of-contents">:arrow_up: Up</a></small>
 </div>
 
 ### Microsoft Azure
@@ -104,7 +104,7 @@ With infrastructure control, Perfect for applications in C# and .Net
 See more: [Microsoft Azure]
 
 <div align="right">
-  <small><a href="#table_of_contents">:arrow_up: Up</a></small>
+  <small><a href="#table-of-contents">:arrow_up: Up</a></small>
 </div>
 
 ### Google Cloud Plaform
@@ -114,7 +114,7 @@ With infrastructure control, One advantage is that it has several of Google's ow
 See more: [Google Cloud Plaform]
 
 <div align="right">
-  <small><a href="#table_of_contents">:arrow_up: Up</a></small>
+  <small><a href="#table-of-contents">:arrow_up: Up</a></small>
 </div>
 
 ### Digital Ocean
@@ -124,7 +124,7 @@ With infrastructure control, it allows you to have a private server and start fi
 See more: [Digital Ocean]
 
 <div align="right">
-  <small><a href="#table_of_contents">:arrow_up: Up</a></small>
+  <small><a href="#table-of-contents">:arrow_up: Up</a></small>
 </div>
 
 ### Zeit
@@ -150,10 +150,10 @@ Without infrastructure control, deploy of any kind, even Docker containers. Can 
 - DNS (zeit.world)
 - Buy Domains by CLI
 
-See more: [Zeit] / [Notas](zeit/)
+See more: [Zeit] / [Notes](zeit/)
 
 <div align="right">
-  <small><a href="#table_of_contents">:arrow_up: Up</a></small>
+  <small><a href="#table-of-contents">:arrow_up: Up</a></small>
 </div>
 
 ### Heroku
@@ -163,7 +163,7 @@ Without infrastructure control, it allows you to deploy without having to think 
 See more: [Heroku]
 
 <div align="right">
-  <small><a href="#table_of_contents">:arrow_up: Up</a></small>
+  <small><a href="#table-of-contents">:arrow_up: Up</a></small>
 </div>
 
 ### GitHub Pages
@@ -179,7 +179,7 @@ The project must be public, also is used mainly to document libraries. The steps
 See more: [GitHub Pages]
 
 <div align="right">
-  <small><a href="#table_of_contents">:arrow_up: Up</a></small>
+  <small><a href="#table-of-contents">:arrow_up: Up</a></small>
 </div>
 
 ### Surge
@@ -201,7 +201,7 @@ Use login data
 See more: [Surge]
 
 <div align="right">
-  <small><a href="#table_of_contents">:arrow_up: Up</a></small>
+  <small><a href="#table-of-contents">:arrow_up: Up</a></small>
 </div>
 
 [amazon web services]: https://aws.amazon.com/
