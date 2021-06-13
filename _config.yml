@@ -1,0 +1,25 @@
+title : Courses Notes
+author: Esteban Solorzano
+
+# Short description about the book
+description: >-
+  A brief introduction to different tools and languages.
+execute:
+  execute_notebooks           : cache
+
+# HTML-specific settings
+html:
+  home_page_in_navbar         : false
+
+# Interact link settings
+notebook_interface            : "notebook"
+
+# Launch button settings
+repository:
+  url                         : https://github.com/estebansolo/course-notes
+  path_to_book                : "docs"
+
+latex:
+  latex_engine                : "xelatex"
+  latex_documents:
+    targetname: book.tex

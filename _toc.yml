@@ -1,0 +1,30 @@
+format: jb-book
+root: docs/index
+parts:
+  - caption: Basics
+    chapters:
+      - file: docs/basics/terminal_linea_comandos
+        title: Terminal y Linea de Comandos
+  - caption: Deployments
+    chapters:
+      - file: docs/deployments/index
+        title: Introduccion
+      - file: docs/deployments/zeit
+        title: Zeit
+      - file: docs/deployments/travis_ci
+        title: Travis CI
+  - caption: Preprocessors
+    chapters:
+      - file: docs/preprocessors/index
+        title: Introduccion
+      - file: docs/preprocessors/less/index
+        title: Less
+      - file: docs/preprocessors/sass/index
+        title: Sass
+      - file: docs/preprocessors/stylus/index
+        title: Stylus
+  - caption: Random
+    chapters:
+      - file: docs/random/google_pagespeed_insights
+        title: Google PageSpeed Insights
+
