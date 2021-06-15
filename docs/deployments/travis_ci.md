@@ -13,13 +13,13 @@ Continuous Integration (CI) y Continuous Delivery (CD)
 - CI: Planear, hacer codigo y pruebas sin generar errores al agregar mas features
 - CD: Despues de pasar el CI tener un release para realizar deploy
 
-#### Travis-ci.org
+### Travis-ci.org
 
 Es necesario tener cuenta en Github, ya que solo trabaja con github para la version gratuita, ademas los repositorios deben ser proyectos open source.
 
 Para usarlo con un repositorio privado debera ser pago, se usa a traves de travis-ci.com
 
-#### .travis.yml
+### .travis.yml
 
 El archivo .travis.yml es necesario agregarlo en el proyecto para su configuracion con travis.
 

@@ -5,6 +5,7 @@ name = "pypi"
 
 [packages]
 jupyter-book = "*"
+sphinx-inline-tabs = "*"
 
 [dev-packages]
 

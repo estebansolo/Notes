@@ -3,8 +3,16 @@ root: docs/index
 parts:
   - caption: Basics
     chapters:
+      - file: docs/basics/pensamiento_logico
+        title: Pensamiento Logico
       - file: docs/basics/terminal_linea_comandos
         title: Terminal y Linea de Comandos
+  - caption: Databases
+    chapters:
+      - file: docs/databases/fundamentos_base_datos
+        title: Fundamentos de Base de Datos
+      - file: docs/databases/postgresql
+        title: PostgreSQL
   - caption: Deployments
     chapters:
       - file: docs/deployments/index
@@ -23,6 +31,20 @@ parts:
         title: Sass
       - file: docs/preprocessors/stylus/index
         title: Stylus
+  - caption: Python
+    chapters:
+      - file: docs/python/index
+        title: Introduccion
+      - file: docs/python/algoritmos_ordenamiento
+        title: Algoritmos de Ordenamiento
+      - file: docs/python/ingenieria_datos
+        title: Ingenieria de Datos
+      - file: docs/python/pensamiento_probabilistico
+        title: Pensamiento Probabilistico
+      - file: docs/python/programacion_estocastica
+        title: Programacion Estocastica
+      - file: docs/python/selenium
+        title: Web Scraping con Selenium
   - caption: Random
     chapters:
       - file: docs/random/google_pagespeed_insights

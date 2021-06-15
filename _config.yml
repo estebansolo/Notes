@@ -5,7 +5,7 @@ author: Esteban Solorzano
 description: >-
   A brief introduction to different tools and languages.
 execute:
-  execute_notebooks           : cache
+  execute_notebooks           : off
 
 # HTML-specific settings
 html:
@@ -23,3 +23,9 @@ latex:
   latex_engine                : "xelatex"
   latex_documents:
     targetname: book.tex
+
+
+sphinx:
+  extra_extensions:
+    - sphinx_inline_tabs
+

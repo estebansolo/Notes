@@ -22,7 +22,7 @@ Los comandos tienen en comun la forma de ejecucion:
 - Parámetros: Informacion adicional
 - Modificadores: Altera lo que el programa va a hacer
 
-```bash
+```
 command_name -flag_1 -flag_2 arg_1 arg_2
 ```
 
@@ -252,7 +252,7 @@ Con eso finalizará el asistente para la configuración de postfix y la instalac
 
 Instala las utilidades de correo con el comando:
 
-```bash
+```
 sudo apt install mailutils
 ```
 
@@ -260,7 +260,7 @@ Y ahora sí, tienes todo lo que necesitas para enviar correos desde la terminal.
 
 Puedes probarlo usando el comando:
 
-```bash
+```
 echo “Hola Mundo!” | mail -s “Testing” TU_EMAIL
 ```
 
@@ -278,7 +278,7 @@ Revisa tu correo (no olvides revisar la bandeja de no deseados!) y ya podrás en
 
 Archivos ejecutables con extension `.sh`
 
-```bash
+```
 #!/bin/bash
 
 echo "Hola Automatizacion"
