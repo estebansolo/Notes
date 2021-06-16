@@ -37,14 +37,44 @@ parts:
         title: Introduccion
       - file: docs/python/algoritmos_ordenamiento
         title: Algoritmos de Ordenamiento
+      - file: docs/python/flask
+        title: Flask
       - file: docs/python/ingenieria_datos
         title: Ingenieria de Datos
+      - file: docs/python/ocr_tesseract
+        title: OCR con Tesseract
       - file: docs/python/pensamiento_probabilistico
         title: Pensamiento Probabilistico
       - file: docs/python/programacion_estocastica
         title: Programacion Estocastica
       - file: docs/python/selenium
         title: Web Scraping con Selenium
+      - file: docs/python/pandas/1_basics
+        title: 1. Pandas - Bases
+      - file: docs/python/pandas/2_save_and_load
+        title: 2. Pandas - Save and Load
+      - file: docs/python/pandas/3_save_load_formats
+        title: 3. Pandas - Save Load Formats
+      - file: docs/python/pandas/4_datatypes
+        title: 4. Pandas - DataTypes
+      - file: docs/python/pandas/5_maths
+        title: 5. Pandas - Maths
+      - file: docs/python/pandas/6_multi_index
+        title: 6. Pandas - Multi Index
+      - file: docs/python/pandas/7_variables_tipo_texto
+        title: 7. Pandas - Variables Tipo Texto
+      - file: docs/python/pandas/8_concat_append
+        title: 8. Pandas - Concat & Append
+      - file: docs/python/pandas/9_merge
+        title: 9. Pandas - Merge
+      - file: docs/python/pandas/10_datos_faltantes_duplicados
+        title: 10. Pandas - Datos Faltantes y Duplicados
+      - file: docs/python/pandas/11_groupby_pivot
+        title: 11. Pandas - Groupby Pivot
+      - file: docs/python/pandas/12_datetimes
+        title: 12. Pandas - DateTimes
+      - file: docs/python/pandas/13_pandas_routine
+        title: 13. Pandas - Pandas Routine
   - caption: Random
     chapters:
       - file: docs/random/google_pagespeed_insights
